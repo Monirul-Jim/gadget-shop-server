@@ -1,0 +1,745 @@
+[
+    {
+        "product_url": "https://adminapi.applegadgetsbd.com/storage/media/thumb/Galaxy-A54-5G-Graphite-7391.jpg",
+        "product_name": "Galaxy A54 5G",
+        "price": 300,
+        "category": "mobile",
+        "sub_category": "samsung"
+    },
+    {
+        "product_url": "https://adminapi.applegadgetsbd.com/storage/media/thumb/realme-GT-Neo-5-5G-Black-1613.jpg",
+        "product_name": "Realme GT Neo 5 5G",
+        "price": 200,
+        "category": "mobile",
+        "sub_category": "realme"
+    },
+    {
+        "product_url": "https://adminapi.applegadgetsbd.com/storage/media/thumb/Galaxy-S23-Ultra-Green-3380.jpg",
+        "product_name": "Galaxy S20 ultra 5G",
+        "price": 1100,
+        "category": "mobile",
+        "sub_category": "samsung"
+    },
+    {
+        "product_url": "https://adminapi.applegadgetsbd.com/storage/media/thumb/ROG-Phone-7-Black-2747.jpg",
+        "product_name": "ROG phone 7",
+        "price": 900,
+        "category": "mobile",
+        "sub_category": "asus"
+    },
+    {
+        "product_url": "https://adminapi.applegadgetsbd.com/storage/media/thumb/Xiaomi-Civi-3-5G-(4)-5449.jpg",
+        "product_name": "Xiaomi civi 3 5G",
+        "price": 400,
+        "category": "mobile",
+        "sub_category": "xiaomi"
+    },
+    {
+        "product_url": "https://adminapi.applegadgetsbd.com/storage/media/thumb/Galaxy-S23-Lavender-4600.jpg",
+        "product_name": "Galaxy S23 5G",
+        "price": 800,
+        "category": "mobile",
+        "sub_category": "samsung"
+    },
+    {
+        "product_url": "https://adminapi.applegadgetsbd.com/storage/media/thumb/Xiaomi-Black-Shark-5-Pro-Stellar-Black-1671.jpg",
+        "product_name": "Xiaomi Black Shark 5 Pro",
+        "price": 749,
+        "category": "mobile",
+        "sub_category": "xiaomi"
+    },
+    {
+        "product_url": "https://adminapi.applegadgetsbd.com/storage/media/thumb/Blue-6462.jpg",
+        "product_name": "OnePlus Nord N20 SE",
+        "price": 699,
+        "category": "mobile",
+        "sub_category": "oneplus"
+    },
+    {
+        "product_url": "https://adminapi.applegadgetsbd.com/storage/media/thumb/Infinix-Note-30-pro--Official-(2)-3689.jpg",
+        "product_name": "Infinix Note 30 Pro",
+        "price": 300,
+        "category": "mobile",
+        "sub_category": "infinix"
+    },
+    {
+        "product_url": "https://adminapi.applegadgetsbd.com/storage/media/thumb/Galaxy-F13---Official-Blue-4284.jpg",
+        "product_name": "Galaxy F13",
+        "price": 330,
+        "category": "mobile",
+        "sub_category": "samsung"
+    },
+    {
+        "product_url": "https://adminapi.applegadgetsbd.com/storage/media/thumb/Infinix-Hot-30-Racing-Black-1080.jpg",
+        "product_name": "Infinix Hot 30",
+        "price": 200,
+        "category": "mobile",
+        "sub_category": "infinix"
+    },
+    {
+        "product_url": "https://adminapi.applegadgetsbd.com/storage/media/thumb/vivo-Y01--Official-Elegant-Black-8029.jpg",
+        "product_name": "vivo Y01",
+        "price": 100,
+        "category": "mobile",
+        "sub_category": "vivo"
+    },
+    {
+        "product_url": "https://adminapi.applegadgetsbd.com/storage/media/thumb/Infinix-Note-30-Official-(2)-6568.jpg",
+        "product_name": "Infinix Note 30",
+        "price": 150,
+        "category": "mobile",
+        "sub_category": "infinix"
+    },
+    {
+        "product_url": "https://adminapi.applegadgetsbd.com/storage/media/thumb/Infinix-Note-12-G88-(1)-6134.jpg",
+        "product_name": "Infinix Note 12 G88",
+        "price": 120,
+        "category": "mobile",
+        "sub_category": "infinix"
+    },
+    {
+        "product_url": "https://adminapi.applegadgetsbd.com/storage/media/thumb/Infinix-Hot-12--Official-(1)-1281.jpg",
+        "product_name": "Infinix Hot 12",
+        "price": 139,
+        "category": "mobile",
+        "sub_category": "infinix"
+    },
+    {
+        "product_url": "https://adminapi.applegadgetsbd.com/storage/media/thumb/Infinix-Hot-12-Play---Official-(1)-1145.jpg",
+        "product_name": "Infinix Hot 12 Play",
+        "price": 125,
+        "category": "mobile",
+        "sub_category": "infinix"
+    },
+    {
+        "product_url": "https://adminapi.applegadgetsbd.com/storage/media/thumb/Infinix-Hot-12-Play---Official-(1)-1145.jpg",
+        "product_name": "Infinix Hot 12 Play",
+        "price": 125,
+        "category": "mobile",
+        "sub_category": "infinix"
+    },
+    {
+        "product_url": "https://adminapi.applegadgetsbd.com/storage/media/thumb/Infinix-Smart-7---Official-(2)-2328.jpg",
+        "product_name": "Infinix Smart 7",
+        "price": 100,
+        "category": "mobile",
+        "sub_category": "infinix"
+    },
+    {
+        "product_url": "https://adminapi.applegadgetsbd.com/storage/media/thumb/Infinix-6-Plus---Official-(3)-4109.jpg",
+        "product_name": "Infinix Smart 6 Plus",
+        "price": 110,
+        "category": "mobile",
+        "sub_category": "infinix"
+    },
+    {
+        "product_url": "https://adminapi.applegadgetsbd.com/storage/media/thumb/Norde-2T-Official-(2)-9491.jpg",
+        "product_name": "OnePlus Nord 2T 5G",
+        "price": 599,
+        "category": "mobile",
+        "sub_category": "oneplus"
+    },
+    {
+        "product_url": "https://adminapi.applegadgetsbd.com/storage/media/thumb/1-9476.jpg",
+        "product_name": "ROG phone 6",
+        "price": 650,
+        "category": "mobile",
+        "sub_category": "asus"
+    },
+    {
+        "product_url": "https://adminapi.applegadgetsbd.com/storage/media/thumb/Asus-Zenfone-9-Midnight-Black-1750.jpg",
+        "product_name": "Asus Zenfone 9",
+        "price": 700,
+        "category": "mobile",
+        "sub_category": "asus"
+    },
+    {
+        "product_url": "https://adminapi.applegadgetsbd.com/storage/media/thumb/Vivo-V27e-Lavender-Purple-4990.jpg",
+        "product_name": "Vivo V27e",
+        "price": 299,
+        "category": "mobile",
+        "sub_category": "vivo"
+    },
+    {
+        "product_url": "https://adminapi.applegadgetsbd.com/storage/media/thumb/Redmi-10A-Graphite-Gray-4294.jpg",
+        "product_name": "Redmi 10A",
+        "price": 110,
+        "category": "mobile",
+        "sub_category": "xiaomi"
+    },
+    {
+        "product_url": "https://adminapi.applegadgetsbd.com/storage/media/thumb/realme-narzo-50-Pro-5G-Hyper-Black-8373.jpg",
+        "product_name": "realme narzo 50 Pro 5G",
+        "price": 230,
+        "category": "mobile",
+        "sub_category": "realme"
+    },
+    {
+        "product_url": "https://adminapi.applegadgetsbd.com/storage/media/thumb/Vivo-V27-Magic-Blue-up-9586.jpg",
+        "product_name": "Vivo V27",
+        "price": 499,
+        "category": "mobile",
+        "sub_category": "vivo"
+    },
+    {
+        "product_url": "https://adminapi.applegadgetsbd.com/storage/media/thumb/ZTE-Axon-40-Ultra-Black-9291.jpg",
+        "product_name": "ZTE Axon 40 Ultra",
+        "price": 799,
+        "category": "mobile",
+        "sub_category": "zte"
+    },
+    {
+        "product_url": "https://adminapi.applegadgetsbd.com/storage/media/thumb/2222-97850.jpg",
+        "product_name": "Redmi Note 10 Pro",
+        "price": 199,
+        "category": "mobile",
+        "sub_category": "xiaomi"
+    },
+    {
+        "product_url": "https://adminapi.applegadgetsbd.com/storage/media/thumb/Xiaomi-12-Pro-Blue-2414.jpg",
+        "product_name": "Xiaomi 12 Pro 5G",
+        "price": 649,
+        "category": "mobile",
+        "sub_category": "xiaomi"
+    },
+    {
+        "product_url": "https://adminapi.applegadgetsbd.com/storage/media/thumb/Onyx-Black-8899.jpg",
+        "product_name": "Redmi Note 12 Pro 5G - ",
+        "price": 299,
+        "category": "mobile",
+        "sub_category": "xiaomi"
+    },
+    {
+        "product_url": "https://adminapi.applegadgetsbd.com/storage/media/thumb/XIAOMI-NOTE-12-PRO+-Arctic-White-Up-4679.jpg",
+        "product_name": "XIAOMI NOTE 12 PRO+ 5G",
+        "price": 399,
+        "category": "mobile",
+        "sub_category": "oneplus"
+    },
+    {
+        "product_url": "https://adminapi.applegadgetsbd.com/storage/media/thumb/Redmi-Note-12-Pro-5G-Midnight-Black-3141.jpg",
+        "product_name": "Redmi Note 12 Pro 5G - INT",
+        "price": 320,
+        "category": "mobile",
+        "sub_category": "xiaomi"
+    },
+    {
+        "product_url": "https://adminapi.applegadgetsbd.com/storage/media/thumb/Arctic-White-9452.jpg",
+        "product_name": "Redmi Note 12 Pro+ 5G - IND",
+        "price": 340,
+        "category": "mobile",
+        "sub_category": "xiaomi"
+    },
+    {
+        "product_url": "https://adminapi.applegadgetsbd.com/storage/media/thumb/Redmi-Note-12-Pro-4G---INT-Glacier-Blue-5944.jpg",
+        "product_name": "Redmi Note 12 Pro 4G - INT",
+        "price": 300,
+        "category": "mobile",
+        "sub_category": "xiaomi"
+    },
+    {
+        "product_url": "https://adminapi.applegadgetsbd.com/storage/media/thumb/2952-80898.jpg",
+        "product_name": "Galaxy S21 Ultra 5G",
+        "price": 1099,
+        "category": "mobile",
+        "sub_category": "samsung"
+    },
+    {
+        "product_url": "https://adminapi.applegadgetsbd.com/storage/media/thumb/2993-27725.jpg",
+        "product_name": "Galaxy A72 ",
+        "price": 500,
+        "category": "mobile",
+        "sub_category": "samsung"
+    },
+    {
+        "product_url": "https://adminapi.applegadgetsbd.com/storage/media/thumb/Galaxy-S23-Ultra-Phantom-Black-2756.jpg",
+        "product_name": "Galaxy S23 Ultra 5G",
+        "price": 1100,
+        "category": "mobile",
+        "sub_category": "samsung"
+    },
+    {
+        "product_url": "https://adminapi.applegadgetsbd.com/storage/media/thumb/4763-47511.jpg",
+        "product_name": "Galaxy S22 5G",
+        "price": 799,
+        "category": "mobile",
+        "sub_category": "samsung"
+    },
+    {
+        "product_url": "https://adminapi.applegadgetsbd.com/storage/media/thumb/1532-85514.jpg",
+        "product_name": "iPhone 12 Pro",
+        "price": 799,
+        "category": "mobile",
+        "sub_category": "iphone"
+    },
+    {
+        "product_url": "https://adminapi.applegadgetsbd.com/storage/media/thumb/Graphite-5075.jpg",
+        "product_name": "Galaxy Z Flip4",
+        "price": 899,
+        "category": "mobile",
+        "sub_category": "samsung"
+    },
+    {
+        "product_url": "https://adminapi.applegadgetsbd.com/storage/media/thumb/Graphite-5075-8944.jpg",
+        "product_name": "Galaxy Z Flip4",
+        "price": 599,
+        "category": "mobile",
+        "sub_category": "samsung"
+    },
+    {
+        "product_url": "https://adminapi.applegadgetsbd.com/storage/media/thumb/Galaxy-F23-5G-(3)-9148.jpg",
+        "product_name": "Galaxy F23 5G",
+        "price": 299,
+        "category": "mobile",
+        "sub_category": "samsung"
+    },
+    {
+        "product_url": "https://adminapi.applegadgetsbd.com/storage/media/thumb/1515-96313.jpg",
+        "product_name": "Apple 10W USB Power Adapter",
+        "price": 20,
+        "category": "adapter",
+        "sub_category": "apple_adapter"
+    },
+    {
+        "product_url": "https://adminapi.applegadgetsbd.com/storage/media/thumb/1516-83999.jpg",
+        "product_name": "Apple 12W USB Power Adapter",
+        "price": 16,
+        "category": "adapter",
+        "sub_category": "apple_adapter"
+    },
+    {
+        "product_url": "https://adminapi.applegadgetsbd.com/storage/media/thumb/1519-43876.jpg",
+        "product_name": "Apple 30W USB-C Power Adapter",
+        "price": 35,
+        "category": "adapter",
+        "sub_category": "apple_adapter"
+    },
+    {
+        "product_url": "https://adminapi.applegadgetsbd.com/storage/media/thumb/1521-23981.jpg",
+        "product_name": "Apple 87W USB-C Power Adapter",
+        "price": 37,
+        "category": "adapter",
+        "sub_category": "apple_adapter"
+    },
+    {
+        "product_url": "https://adminapi.applegadgetsbd.com/storage/media/thumb/1526-85853.jpg",
+        "product_name": "Apple 20W USB-C Power Adapter",
+        "price": 30,
+        "category": "adapter",
+        "sub_category": "apple_adapter"
+    },
+    {
+        "product_url": "https://adminapi.applegadgetsbd.com/storage/media/thumb/1526-85853.jpg",
+        "product_name": "Apple 20W USB-C Power Adapter",
+        "price": 30,
+        "category": "adapter",
+        "sub_category": "apple_adapter"
+    },
+    {
+        "product_url": "https://adminapi.applegadgetsbd.com/storage/media/thumb/2214-47082.jpg",
+        "product_name": "Apple 60W MagSafe 2 Power Adapter",
+        "price": 30,
+        "category": "adapter",
+        "sub_category": "apple_adapter"
+    },
+    {
+        "product_url": "https://adminapi.applegadgetsbd.com/storage/media/thumb/2215-95800.jpg",
+        "product_name": "Apple 85W MagSafe 2 Power Adapter",
+        "price": 55,
+        "category": "adapter",
+        "sub_category": "apple_adapter"
+    },
+    {
+        "product_url": "https://adminapi.applegadgetsbd.com/storage/media/thumb/2215-95800.jpg",
+        "product_name": "Apple 85W MagSafe 2 Power Adapter",
+        "price": 55,
+        "category": "adapter",
+        "sub_category": "apple_adapter"
+    },
+    {
+        "product_url": "https://adminapi.applegadgetsbd.com/storage/media/thumb/2836-25133.jpg",
+        "product_name": "Apple World Travel Adapter Kit",
+        "price": 36,
+        "category": "adapter",
+        "sub_category": "apple_adapter"
+    },
+    {
+        "product_url": "https://adminapi.applegadgetsbd.com/storage/media/thumb/3380-89102.jpg",
+        "product_name": "Apple 87W USB-C Power Adapter With USB-C Charge Cable - 2m",
+        "price": 45,
+        "category": "adapter",
+        "sub_category": "apple_adapter"
+    },
+    {
+        "product_url": "https://adminapi.applegadgetsbd.com/storage/media/thumb/Apple-35W-Dual-USB-C-Port-Power-Adapter-a-4362.jpg",
+        "product_name": "Apple 35W Dual USB-C Port Power Adapter",
+        "price": 40,
+        "category": "adapter",
+        "sub_category": "apple_adapter"
+    },
+    {
+        "product_url": "https://adminapi.applegadgetsbd.com/storage/media/thumb/1749-74490.jpg",
+        "product_name": "Anker Charging Dock PowerPort 2 Elite",
+        "price": 25.50,
+        "category": "adapter",
+        "sub_category": "anker_adapter"
+    },
+    {
+        "product_url": "https://adminapi.applegadgetsbd.com/storage/media/thumb/2023-57144.jpg",
+        "product_name": "Samsung 25W USB-C Power Adapter",
+        "price": 20,
+        "category": "adapter",
+        "sub_category": "samsung_adapter"
+    },
+    {
+        "product_url": "https://adminapi.applegadgetsbd.com/storage/media/thumb/3331-54939.jpg",
+        "product_name": "Huawei Charger SuperCharge Max 40W",
+        "price": 13,
+        "category": "adapter",
+        "sub_category": "huawei_adapter"
+    },
+    {
+        "product_url": "https://adminapi.applegadgetsbd.com/storage/media/thumb/2325-79475.jpg",
+        "product_name": "MacBook Air M2 16/256GB 13.6-inch 8-CPU 8-GPU Space Gray",
+        "price": 1299,
+        "category": "macbook",
+        "sub_category": "apple_macbook"
+    },
+    {
+        "product_url": "https://adminapi.applegadgetsbd.com/storage/media/thumb/MacBook-Air-M2-15-inch-8-CPU-10-GPU-Midnight-2449.jpg",
+        "product_name": "MacBook Air M2 15-inch 8-CPU 10-GPU",
+        "price": 1555,
+        "category": "macbook",
+        "sub_category": "apple_macbook"
+    },
+    {
+        "product_url": "https://adminapi.applegadgetsbd.com/storage/media/thumb/MacBook-Air-M2-16256GB-13.6-inch-8-CPU-8-GPU-Starlight-4062.jpg",
+        "product_name": "MacBook Air M2 16/256GB 13.6-inch 8-CPU 8-GPU Starlight",
+        "price": 1165,
+        "category": "macbook",
+        "sub_category": "apple_macbook"
+    },
+    {
+        "product_url": "https://adminapi.applegadgetsbd.com/storage/media/thumb/Kieslect-KR-Pro-Smart-Watch-(4)-9953.jpg",
+        "product_name": "Kieslect KR Pro Calling Smart Watch",
+        "price": 63,
+        "category": "watch",
+        "sub_category": "samsung_watch"
+    },
+    {
+        "product_url": "https://adminapi.applegadgetsbd.com/storage/media/thumb/3218-51839.jpg",
+        "product_name": "Galaxy Watch4 Classic",
+        "price": 110,
+        "category": "watch",
+        "sub_category": "samsung_watch"
+    },
+    {
+        "product_url": "https://adminapi.applegadgetsbd.com/storage/media/thumb/3219-49082.jpg",
+        "product_name": "Galaxy Watch4",
+        "price": 115,
+        "category": "watch",
+        "sub_category": "samsung_watch"
+    },
+    {
+        "product_url": "https://adminapi.applegadgetsbd.com/storage/media/thumb/Galaxy-Watch5-Pro-Black-a-1626.jpg",
+        "product_name": "Galaxy Watch5 Pro",
+        "price": 331,
+        "category": "watch",
+        "sub_category": "samsung_watch"
+    },
+    {
+        "product_url": "https://adminapi.applegadgetsbd.com/storage/media/thumb/Galaxy-Watch5-Graphite-8490.jpg",
+        "product_name": "Galaxy Watch5",
+        "price": 331,
+        "category": "watch",
+        "sub_category": "samsung_watch"
+    },
+    {
+        "product_url": "https://adminapi.applegadgetsbd.com/storage/media/thumb/Apple-Watch-SE-2020-Gold-GPS-2595.jpg",
+        "product_name": "Apple Watch SE 2020",
+        "price": 270,
+        "category": "watch",
+        "sub_category": "apple_watch"
+    },
+    {
+        "product_url": "https://adminapi.applegadgetsbd.com/storage/media/thumb/3631-81440.jpg",
+        "product_name": "Apple Watch Series 7",
+        "price": 290,
+        "category": "watch",
+        "sub_category": "apple_watch"
+    },
+    {
+        "product_url": "https://adminapi.applegadgetsbd.com/storage/media/thumb/3674-25313.jpg",
+        "product_name": "Apple AirPods 3",
+        "price": 299,
+        "category": "airpods",
+        "sub_category": "apple_airpods"
+    },
+    {
+        "product_url": "https://adminapi.applegadgetsbd.com/storage/media/thumb/4047-67498.jpg",
+        "product_name": "Amazon Echo Buds 2nd Gen",
+        "price": 150,
+        "category": "airpods",
+        "sub_category": "amazone_airpods"
+    },
+    {
+        "product_url": "https://adminapi.applegadgetsbd.com/storage/media/thumb/2116-28497.jpg",
+        "product_name": "Galaxy Buds Live",
+        "price": 190,
+        "category": "airpods",
+        "sub_category": "samsung_airpods"
+    },
+    {
+        "product_url":"https://adminapi.applegadgetsbd.com/storage/media/thumb/1586-85986.jpg",
+        "product_name": "OnePlus Buds",
+        "price": 55,
+        "category": "airpods",
+        "sub_category": "oneplus_airpods"
+    },
+    {
+        "product_url":"https://adminapi.applegadgetsbd.com/storage/media/thumb/AKG_Y600NC-Wireless_Black_Heroimage.jpg..-9189.jpg",
+        "product_name": "AKG Y600NC Wireless Over-Ear NC Headphones",
+        "price": 200,
+        "category": "headphones",
+        "sub_category": "akg_headphones"
+    },
+    {
+        "product_url":"https://adminapi.applegadgetsbd.com/storage/media/thumb/1976-68145.jpg",
+        "product_name": "Anker Headphones",
+        "price": 62,
+        "category": "headphones",
+        "sub_category": "anker_headphones"
+    },
+    {
+        "product_url":"https://adminapi.applegadgetsbd.com/storage/media/thumb/4586-65419.jpg",
+        "product_name": "HP HM200 Bluetooth Headset",
+        "price": 29,
+        "category": "headphones",
+        "sub_category": "anker_headphones"
+    },
+    {
+        "product_url":"https://adminapi.applegadgetsbd.com/storage/media/thumb/4346-26086.jpg",
+        "product_name": "Xiaomi Wireless Bluetooth headset K Version",
+        "price": 28,
+        "category": "headphones",
+        "sub_category": "xiaomi_headphones"
+    },
+    {
+        "product_url":"https://adminapi.applegadgetsbd.com/storage/media/thumb/2035-61943.jpg",
+        "product_name": "Amazon Echo Dot 3rd Gen Mini Speaker",
+        "price": 40,
+        "category": "speakers",
+        "sub_category": "amazon_speakers"
+    },
+    {
+        "product_url":"https://adminapi.applegadgetsbd.com/storage/media/thumb/1525-22360.jpg",
+        "product_name": "Apple HomePod mini",
+        "price": 200,
+        "category": "speakers",
+        "sub_category": "apple_speakers"
+    },
+    {
+        "product_url":"https://adminapi.applegadgetsbd.com/storage/media/thumb/1960-61581.jpg",
+        "product_name": "JBL Pulse 4 Portable Bluetooth Speaker",
+        "price": 120,
+        "category": "speakers",
+        "sub_category": "jbl_speakers"
+    },
+    {
+        "product_url":"https://adminapi.applegadgetsbd.com/storage/media/thumb/2721-47649.jpg",
+        "product_name": "Marshall Emberton Compact Portable Wireless Speaker",
+        "price": 120,
+        "category": "speakers",
+        "sub_category": "marshall_speakers"
+    },
+    {
+        "product_url":"https://adminapi.applegadgetsbd.com/storage/media/thumb/1849-23908.jpg",
+        "product_name": "Anker Soundbuds Flow",
+        "price": 24,
+        "category": "earphone",
+        "sub_category": "anker_earphone"
+    },
+    {
+        "product_url":"https://adminapi.applegadgetsbd.com/storage/media/thumb/2025-61940.jpg",
+        "product_name": "Samsung Level U2 Wireless Headphones",
+        "price": 24,
+        "category": "earphone",
+        "sub_category": "samsung_earphone"
+    },
+    {
+        "product_url":"https://adminapi.applegadgetsbd.com/storage/media/thumb/4474-19845.jpg",
+        "product_name": "Xiaomi Mi Basic Bluetooth Neckband",
+        "price": 21.50,
+        "category": "earphone",
+        "sub_category": "xiaomi_earphone"
+    },
+    {
+        "product_url":"https://adminapi.applegadgetsbd.com/storage/media/thumb/OnePlus-Bullets-Wireless-Z2-Magico-Black-a-7622.jpg",
+        "product_name": "OnePlus Bullets Wireless Z2",
+        "price": 28.50,
+        "category": "earphone",
+        "sub_category": "oneplus_earphone"
+    },
+    {
+        "product_url":"https://adminapi.applegadgetsbd.com/storage/media/thumb/2323-92738.jpg",
+        "product_name": "MacBook Air M1 8/256GB 13-inch Space Gray",
+        "price": 900,
+        "category": "macbook",
+        "sub_category": "new_arrival"
+    },
+    {
+        "product_url":"https://adminapi.applegadgetsbd.com/storage/media/thumb/iPad-Pro-M2-2022---11inch-Space-Gray-9527.jpg",
+        "product_name": "iPad Pro M2 2022 - 11inch",
+        "price": 995,
+        "category": "ipad",
+        "sub_category": "new_arrival"
+    },
+    {
+        "product_url":"https://adminapi.applegadgetsbd.com/storage/media/thumb/iPhone-14-Pro-Max-9907.jpg",
+        "product_name": "iPhone 14 Pro Max",
+        "price":1100,
+        "category": "ipad",
+        "sub_category": "new_arrival"
+    },
+    {
+        "product_url":"https://adminapi.applegadgetsbd.com/storage/media/thumb/Galaxy-S23-Ultra-Green-3380.jpg",
+        "product_name": "Galaxy S23 Ultra 5G",
+        "price":1199,
+        "category": "samsung",
+        "sub_category": "new_arrival"
+    },
+    {
+        "product_url":"https://adminapi.applegadgetsbd.com/storage/media/thumb/Galaxy-S23-Ultra-Green-3380.jpg",
+        "product_name": "Galaxy S23 Ultra 5G",
+        "price":1199,
+        "category": "samsung",
+        "sub_category": "new_arrival"
+    },
+    {
+        "product_url":"https://adminapi.applegadgetsbd.com/storage/media/thumb/Galaxy-Tab-S6-Lite---2022-Edition-Oxford-Gray-3011.jpg",
+        "product_name": "Galaxy Tab S6 Lite - 2022 Edition",
+        "price":330,
+        "category": "samsung",
+        "sub_category": "new_arrival"
+    },
+    {
+        "product_url":"https://adminapi.applegadgetsbd.com/storage/media/thumb/Sage-8677.png",
+        "product_name": "Pixel 6a 5G",
+        "price":330,
+        "category": "google",
+        "sub_category": "new_arrival"
+    },
+    {
+        "product_url":"https://adminapi.applegadgetsbd.com/storage/media/thumb/4920-50083.jpg",
+        "product_name": "OnePlus 10 Pro",
+        "price":660.50,
+        "category": "google",
+        "sub_category": "new_arrival"
+    },
+    {
+        "product_url":"https://adminapi.applegadgetsbd.com/storage/media/thumb/Xiaomi-12-Pro-Blue-2414.jpg",
+        "product_name": "Xiaomi 12 Pro 5G",
+        "price":665.50,
+        "category": "xiaomi",
+        "sub_category": "new_arrival"
+    },
+    {
+        "product_url":"https://adminapi.applegadgetsbd.com/storage/media/thumb/xiaomi-13-ultra-Olive-Green-Up-3118.jpg",
+        "product_name": "Xiaomi 13 Ultra",
+        "price":775.50,
+        "category": "xiaomi",
+        "sub_category": "new_arrival"
+    },
+    {
+        "product_url":"https://adminapi.applegadgetsbd.com/storage/media/thumb/Pixel-7a-1-1762.jpg",
+        "product_name": "Pixel 7a",
+        "price":551.50,
+        "category": "xiaomi",
+        "sub_category": "new_arrival"
+    },
+    {
+        "product_url":"https://adminapi.applegadgetsbd.com/storage/media/thumb/Xiaomi-12-Pro-Blue-2414.jpg",
+        "product_name": "Xiaomi 13  Pro 5G",
+        "price":665.50,
+        "category": "xiaomi",
+        "sub_category": "new_arrival"
+    },
+    {
+        "product_url":"https://adminapi.applegadgetsbd.com/storage/media/thumb/iPhone-14-Purple-6116.jpg",
+        "product_name": "iPhone 14",
+        "price":995.50,
+        "category": "iphone",
+        "sub_category": "best_deal"
+    },
+    {
+        "product_url":"https://adminapi.applegadgetsbd.com/storage/media/thumb/3408-34138.jpg",
+        "product_name": "iPhone 14 Plus",
+        "price":882.50,
+        "category": "iphone",
+        "sub_category": "best_deal"
+    },
+    {
+        "product_url":"https://adminapi.applegadgetsbd.com/storage/media/thumb/4910-33232.jpg",
+        "product_name": "OnePlus Nord CE 2 5G",
+        "ram_rom":"8/256",
+        "price":322,
+        "category": "oneplus",
+        "sub_category": "best_deal"
+    },
+    {
+        "product_url":"https://adminapi.applegadgetsbd.com/storage/media/thumb/4910-33232.jpg",
+        "product_name": "OnePlus Nord CE 2 5G",
+        "ram_rom":"8/256",
+        "price":322,
+        "category": "oneplus",
+        "sub_category": "best_deal"
+    },
+    {
+        "product_url":"https://adminapi.applegadgetsbd.com/storage/media/thumb/2470-33969.jpg",
+        "product_name": "iPad Pro M1 2021 - 12.9inch",
+        "ram_rom":"8/256",
+        "price":1115,
+        "category": "ipad",
+        "sub_category": "best_deal"
+    },
+    {
+        "product_url":"https://adminapi.applegadgetsbd.com/storage/media/thumb/3710-10824.jpg",
+        "product_name": "MacBook Pro M1 Pro 8-CPU 14-GPU 14-inch",
+        "ram_rom":"8/256",
+        "price":1890,
+        "category": "macbook",
+        "sub_category": "best_deal"
+    },
+    {
+        "product_url":"https://adminapi.applegadgetsbd.com/storage/media/thumb/White-6093.jpg",
+        "product_name": "NOTHING phone (1)",
+        "ram_rom":"8/256",
+        "price":400,
+        "category": "macbook",
+        "sub_category": "best_deal"
+    },
+    {
+        "product_url":"https://adminapi.applegadgetsbd.com/storage/media/thumb/3408-34138.jpg",
+        "product_name": "NOTHING phone (1)",
+        "ram_rom":"8/256",
+        "price":882,
+        "category": "iphone",
+        "sub_category": "best_sellers"
+    },
+    {
+        "product_url":"https://adminapi.applegadgetsbd.com/storage/media/thumb/iPhone-14-Pro-Max-9907.jpg",
+        "product_name": "iPhone 14 Pro Max",
+        "ram_rom":"8/256",
+        "price":1130,
+        "category": "iphone",
+        "sub_category": "best_sellers"
+    },
+    {
+        "product_url":"https://adminapi.applegadgetsbd.com/storage/media/thumb/4679-9527.jpg",
+        "product_name": "Galaxy S22 Ultra",
+        "ram_rom":"8/256",
+        "price":800,
+        "category": "iphone",
+        "sub_category": "best_sellers"
+    }
+]
