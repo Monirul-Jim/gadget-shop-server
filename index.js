@@ -1,5 +1,6 @@
 const express = require('express');
 require('dotenv').config()
+const SSLCommerzPayment = require('sslcommerz-lts')
 const app = express();
 const jwt = require('jsonwebtoken');
 const cors = require('cors');
@@ -40,12 +41,18 @@ const client = new MongoClient(uri, {
   }
 });
 
+
+const store_id = process.env.SSL_STOREID
+const store_passwd = process.env.SSL_PASS;
+const is_live = false;
 async function run() {
   try {
 
     // Connect the client to the server	(optional starting in v4.7)
     await client.connect();
     const product = client.db("eCommerce-website").collection("product-collection");
+    const userOrderProduct = client.db("eCommerce-website").collection("orderProduct");
+    const confirmOrderProduct = client.db("eCommerce-website").collection("confirmProduct");
     const filterImage = client.db("eCommerce-website").collection("filter-collection");
     const AllUserCollection = client.db("eCommerce-website").collection("all-userCollection");
 
@@ -69,8 +76,68 @@ async function run() {
     }
 
 
+    // generate unique id
+    const tran_id = new ObjectId().toString()
+    // here i post confirm order element
+    app.post('/confirm-order-post', async (req, res) => {
+      const initialProduct = await product.findOne({ _id: new ObjectId(req.body.id) })
+      console.log(initialProduct);
+      const order = req.body
+      console.log(order);
+      const data = {
+        total_amount: initialProduct?.price,
+        currency: "BDT",   // order.currency
+        tran_id: tran_id, // use unique tran_id for each api call
+        success_url: `http://localhost:5000/payment/success/${tran_id}`,
+        fail_url: 'http://localhost:5000',
+        cancel_url: 'http://localhost:3030/cancel',
+        ipn_url: 'http://localhost:3030/ipn',
+        shipping_method: 'Courier',
+        product_name: order.product,
+        pro_img: order.image,
+        cus_name: order.name,
+        cus_last: order.last,
+        cus_email: order.email,
+        cus_add1: order.area,
+        cus_city: order.division,
+        cus_state: order.district,
+        cus_postcode: order.post,
+        cus_country: 'Bangladesh',
+        cus_phone: order.number,
+        cus_feed: order.feedback,
+        ship_add1: order.address,
+        ship_postcode: 1000,
+        ship_country: 'Bangladesh',
+      };
+      const sslcz = new SSLCommerzPayment(store_id, store_passwd, is_live)
+      sslcz.init(data).then(apiResponse => {
+        // Redirect the user to payment gateway
+        let GatewayPageURL = apiResponse.GatewayPageURL;
+        res.send({ url: GatewayPageURL })
+        const finalOrder = {
+          initialProduct,
+          paid_status: false,
+          transactionId: tran_id,
+          info: data
+        }
+        const result = confirmOrderProduct.insertOne(finalOrder)
+      });
+
+      app.post('/payment/success/:tranID', async (req, res) => {
+        const result = await confirmOrderProduct.updateOne({ transactionId: req.params.tranID }, {
+          $set: {
+            paid_status: true
+          }
+        })
+
+        if (result.modifiedCount > 0) {
+          res.redirect('http://localhost:5173/dashboard')
+        }
 
 
+      })
+
+    })
 
 
 
@@ -155,7 +222,7 @@ async function run() {
 
 
 
-
+    // find product from database
     app.get("/product-collections", async (req, res) => {
       const result = await product.find().toArray()
       res.send(result)
@@ -178,6 +245,35 @@ async function run() {
       res.send(result)
     })
 
+    // here i make handleAddCart operation
+    app.post('/product-added-database', async (req, res) => {
+      const product = req.body
+      const insertProduct = await userOrderProduct.insertOne(product)
+      res.send(insertProduct)
+    })
+    // find user product by specific email
+    app.get('/product-added-database', jsonWebToken, async (req, res) => {
+      const email = req.query.email;
+      if (!email) {
+        res.send([]);
+      }
+
+      const decodedEmail = req.decoded.email;
+      if (email !== decodedEmail) {
+        return res.status(403).send({ error: true, message: 'forbidden access' })
+      }
+
+      const query = { email: email };
+      const result = await userOrderProduct.find(query).toArray();
+      res.send(result);
+    })
+    // delete product by user
+    app.delete('/product-delete/:id', async (req, res) => {
+      const id = req.params.id
+      const query = { _id: new ObjectId(id) }
+      const result = await userOrderProduct.deleteMany(query)
+      res.send(result)
+    })
 
 
     // Send a ping to confirm a successful connection
