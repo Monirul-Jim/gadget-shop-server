@@ -41,10 +41,10 @@ const client = new MongoClient(uri, {
   }
 });
 
-
 const store_id = process.env.SSL_STOREID
 const store_passwd = process.env.SSL_PASS;
 const is_live = false;
+
 async function run() {
   try {
 
@@ -81,9 +81,7 @@ async function run() {
     // here i post confirm order element
     app.post('/confirm-order-post', async (req, res) => {
       const initialProduct = await product.findOne({ _id: new ObjectId(req.body.id) })
-      console.log(initialProduct);
       const order = req.body
-      console.log(order);
       const data = {
         total_amount: initialProduct?.price,
         currency: "BDT",   // order.currency
@@ -97,6 +95,10 @@ async function run() {
         pro_img: order.image,
         cus_name: order.name,
         cus_last: order.last,
+        ship_name: 'Bangladesh',
+        ship_city: 'dhaka',
+        product_profile: 'general',
+        product_category: 'Mobile',
         cus_email: order.email,
         cus_add1: order.area,
         cus_city: order.division,
@@ -111,6 +113,7 @@ async function run() {
       };
       const sslcz = new SSLCommerzPayment(store_id, store_passwd, is_live)
       sslcz.init(data).then(apiResponse => {
+        console.log(apiResponse);
         // Redirect the user to payment gateway
         let GatewayPageURL = apiResponse.GatewayPageURL;
         res.send({ url: GatewayPageURL })
@@ -131,15 +134,13 @@ async function run() {
         })
 
         if (result.modifiedCount > 0) {
-          res.redirect('http://localhost:5173/dashboard')
+          res.redirect('http://localhost:5173/dashboard-for-all')
         }
 
 
       })
 
     })
-
-
 
     // all user collection in database is here
     app.post('/users', async (req, res) => {
@@ -225,6 +226,16 @@ async function run() {
     // find product from database
     app.get("/product-collections", async (req, res) => {
       const result = await product.find().toArray()
+      res.send(result)
+    })
+    // search product
+    app.get('/search-product/:text', async (req, res) => {
+      const searchText = req.params.text
+      const result = await product.find({
+        $or: [
+          { product_name: { $regex: searchText, $options: "i" } }
+        ],
+      }).toArray()
       res.send(result)
     })
     //  get product by unique id and get it by single product
