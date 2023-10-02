@@ -75,7 +75,10 @@ async function run() {
       next();
     }
 
-
+    app.get('/confirmProduct', async (req, res) => {
+      const orderedProduct = await confirmOrderProduct.find().toArray()
+      res.send(orderedProduct)
+    })
     // generate unique id
     const tran_id = new ObjectId().toString()
     // here i post confirm order element
@@ -184,7 +187,12 @@ async function run() {
       res.send(result);
     })
 
-
+    app.get('/confirmProduct/:email', async (req, res) => {
+      const email = req.params.email;
+      const query = { cus_email : email }
+      const user = await confirmOrderProduct.findOne(query);
+      res.send(user)
+    })
 
     // make user instructor
     app.patch('/users/seller/:id', async (req, res) => {
