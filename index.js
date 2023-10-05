@@ -161,6 +161,17 @@ async function run() {
       const result = await AllUserCollection.find().toArray();
       res.send(result);
     });
+
+    app.get('/confirmProduct', async (req, res) => {
+      let query = {}
+      if (req.query?.email) {
+        query = { email: req.query.email }
+      }
+      const result = await confirmOrderProduct.find(query).toArray()
+      res.send(result)
+    })
+
+
     // make a user admin
     app.patch('/users/admin/:id', async (req, res) => {
       const id = req.params.id;
@@ -269,6 +280,13 @@ async function run() {
       const product = req.body
       const insertProduct = await userOrderProduct.insertOne(product)
       res.send(insertProduct)
+    })
+
+    // seller add product to database
+    app.post('/seller-added-product', async (req, res) => {
+      const addedProduct = req.body
+      const sellerInsertProduct = await product.insertOne(addedProduct)
+      res.send(sellerInsertProduct)
     })
     // find user product by specific email
     app.get('/product-added-database', jsonWebToken, async (req, res) => {
