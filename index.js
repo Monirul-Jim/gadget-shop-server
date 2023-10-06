@@ -76,15 +76,26 @@ async function run() {
     }
 
     app.get('/confirmProduct', async (req, res) => {
-      const orderedProduct = await confirmOrderProduct.find().toArray()
-      res.send(orderedProduct)
-    })
+      const orderedProduct = await confirmOrderProduct.find().toArray();
+      const searchEmail = req.query.cus_email;
+      const productsByEmail = orderedProduct.filter((order) => order.info.cus_email === searchEmail);
+
+      res.send(productsByEmail);
+    });
+    app.get('/get-order-product', async (req, res) => {
+      const orderedProduct = await confirmOrderProduct.find().toArray();
+      res.send(orderedProduct);
+    });
+
     // generate unique id
     const tran_id = new ObjectId().toString()
     // here i post confirm order element
     app.post('/confirm-order-post', async (req, res) => {
       const initialProduct = await product.findOne({ _id: new ObjectId(req.body.id) })
       const order = req.body
+      const email = req.body.email
+      console.log(email);
+      console.log(order);
       const data = {
         total_amount: initialProduct?.price,
         currency: "BDT",   // order.currency
@@ -200,7 +211,7 @@ async function run() {
 
     app.get('/confirmProduct/:email', async (req, res) => {
       const email = req.params.email;
-      const query = { cus_email : email }
+      const query = { cus_email: email }
       const user = await confirmOrderProduct.findOne(query);
       res.send(user)
     })
