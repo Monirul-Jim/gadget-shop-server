@@ -61,7 +61,7 @@ async function run() {
     // create jwt token to secure api
     app.post('/jwt', (req, res) => {
       const user = req.body;
-      const token = jwt.sign(user, process.env.ACCESS_TOKEN, { expiresIn: '1h' })
+      const token = jwt.sign(user, process.env.ACCESS_TOKEN, { expiresIn: '30d' })
       res.send({ token })
     })
 
@@ -148,14 +148,13 @@ async function run() {
         })
 
         if (result.modifiedCount > 0) {
-          res.redirect('http://localhost:5173/dashboard-for-all')
+          res.redirect('http://localhost:5173/dashboard-for-all/userOrderedItem')
         }
 
 
       })
 
     })
-
     // all user collection in database is here
     app.post('/users', async (req, res) => {
       const user = req.body;
