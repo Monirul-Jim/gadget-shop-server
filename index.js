@@ -100,10 +100,10 @@ async function run() {
         total_amount: initialProduct?.price,
         currency: "BDT",   // order.currency
         tran_id: tran_id, // use unique tran_id for each api call
-        success_url: `http://localhost:5000/payment/success/${tran_id}`,
-        fail_url: 'http://localhost:5000',
-        cancel_url: 'http://localhost:3030/cancel',
-        ipn_url: 'http://localhost:3030/ipn',
+        success_url: `https://gadget-shop-server.vercel.app/payment/success/${tran_id}`,
+        fail_url: 'https://gadget-shop-server.vercel.app',
+        cancel_url: 'https://gadget-shop-server.vercel.app/cancel',
+        ipn_url: 'https://gadget-shop-server.vercel.app/ipn',
         shipping_method: 'Courier',
         product_name: order.product,
         pro_img: order.image,
@@ -148,7 +148,7 @@ async function run() {
         })
 
         if (result.modifiedCount > 0) {
-          res.redirect('http://localhost:5173/dashboard-for-all/userOrderedItem')
+          res.redirect('https://gadget-shop-server.vercel.app/dashboard-for-all/userOrderedItem')
         }
 
 
