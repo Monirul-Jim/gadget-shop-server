@@ -321,6 +321,39 @@ async function run() {
       const result = await userOrderProduct.deleteMany(query)
       res.send(result)
     })
+    // here i update seller product info
+    app.put('/seller-update-product/:id', async (req, res) => {
+      const id = req.params.id
+      const filter = { _id: new ObjectId(id) }
+      const options = { upsert: true }
+      const updateProduct = req.body
+      const updateProducts = {
+        $set: {
+          product_url: updateProduct?.product_url,
+          product_name: updateProduct?.product_name,
+          ram_rom: updateProduct?.ram_rom,
+          price: updateProduct?.price,
+          category: updateProduct?.category,
+          sub_category: updateProduct?.sub_category,
+          best: updateProduct?.best
+        }
+      }
+      const updateProductInfo = product.updateOne(filter, updateProducts, options)
+      res.send(updateProductInfo)
+    })
+    app.get('/seller-update-product/:id', async (req, res) => {
+      const id = req.params.id
+      const query = { _id: new ObjectId(id) }
+      const result = await product.findOne(query)
+      res.send(result)
+    })
+
+    app.delete('/seller-delete/:id', async (req, res) => {
+      const id = req.params.id
+      const query = { _id: new ObjectId(id) }
+      const result = await product.deleteOne(query)
+      res.send(result)
+    })
 
 
     // Send a ping to confirm a successful connection
