@@ -58,6 +58,7 @@ async function run() {
     const product = client.db("eCommerce-website").collection("product-collection");
     const userOrderProduct = client.db("eCommerce-website").collection("orderProduct");
     const confirmOrderProduct = client.db("eCommerce-website").collection("confirmProduct");
+    const quantityProductCollection = client.db("eCommerce-website").collection("product-quantity");
     const filterImage = client.db("eCommerce-website").collection("filter-collection");
     const AllUserCollection = client.db("eCommerce-website").collection("all-userCollection");
 
@@ -66,7 +67,7 @@ async function run() {
     // create jwt token to secure api
     app.post('/jwt', (req, res) => {
       const user = req.body;
-      const token = jwt.sign(user, process.env.ACCESS_TOKEN, { expiresIn: '30d' })
+      const token = jwt.sign(user, process.env.ACCESS_TOKEN, { expiresIn: '1h' })
       res.send({ token })
     })
 
@@ -91,6 +92,14 @@ async function run() {
       const orderedProduct = await confirmOrderProduct.find().toArray();
       res.send(orderedProduct);
     });
+    // app.get('/confirmProduct', async (req, res) => {
+    //   let query = {}
+    //   if (req.query?.email) {
+    //     query = { email: req.query.email }
+    //   }
+    //   const result = await confirmOrderProduct.find(query).toArray()
+    //   res.send(result)
+    // })
 
     // generate unique id
     const tran_id = new ObjectId().toString()
@@ -99,8 +108,6 @@ async function run() {
       const initialProduct = await product.findOne({ _id: new ObjectId(req.body.id) })
       const order = req.body
       const email = req.body.email
-      console.log(email);
-      console.log(order);
       const data = {
         total_amount: initialProduct?.price,
         currency: "BDT",   // order.currency
@@ -132,7 +139,6 @@ async function run() {
       };
       const sslcz = new SSLCommerzPayment(store_id, store_passwd, is_live)
       sslcz.init(data).then(apiResponse => {
-        console.log(apiResponse);
         // Redirect the user to payment gateway
         let GatewayPageURL = apiResponse.GatewayPageURL;
         res.send({ url: GatewayPageURL })
@@ -160,6 +166,81 @@ async function run() {
       })
 
     })
+
+    const transId = new ObjectId().toString()
+    app.post('/customer-double-quantity-order', async (req, res) => {
+      // const initialConfirmProduct = await product.findOne({ _id: new ObjectId(req.body.id) })
+      const order = req.body
+      const data = {
+        total_amount: req.body.total,
+        currency: 'BDT',
+        tran_id: 'REF123', // use unique tran_id for each api call
+        success_url: `http://localhost:3030/success/${transId}`,
+        fail_url: 'http://localhost:3030/fail',
+        cancel_url: 'http://localhost:3030/cancel',
+        ipn_url: 'http://localhost:3030/ipn',
+        shipping_method: 'Courier',
+        product_name: 'Computer.',
+        product_category: 'Electronic',
+        product_profile: 'general',
+        cus_name: 'Customer Name',
+        cus_email: 'customer@example.com',
+        cus_add1: 'Dhaka',
+        cus_add2: 'Dhaka',
+        cus_city: 'Dhaka',
+        cus_state: 'Dhaka',
+        cus_postcode: '1000',
+        cus_country: 'Bangladesh',
+        cus_phone: '01711111111',
+        cus_fax: '01711111111',
+        ship_name: 'Customer Name',
+        ship_add1: 'Dhaka',
+        ship_add2: 'Dhaka',
+        ship_city: 'Dhaka',
+        ship_state: 'Dhaka',
+        ship_postcode: 1000,
+        ship_country: 'Bangladesh',
+      };
+      const sslcz = new SSLCommerzPayment(store_id, store_passwd, is_live)
+      sslcz.init(data).then(apiResponse => {
+        console.log(apiResponse);
+        // Redirect the user to payment gateway
+        let GatewayPageURL = apiResponse.GatewayPageURL
+        res.send({ url: GatewayPageURL });
+        const initialConfirmProductData = {
+          order,
+          paid_status: false,
+          transactionId: transId,
+          info: data
+        }
+        const result = confirmOrderProduct.insertOne(initialConfirmProductData)
+      });
+
+      app.post('/payment/success/:tranID', async (req, res) => {
+        const result = await confirmOrderProduct.updateOne({ transactionId: req.params.tranID }, {
+          $set: {
+            paid_status: true
+          }
+        })
+
+        if (result.modifiedCount > 0) {
+          res.redirect('http://localhost:5173/dashboard-for-all/userOrderedItem')
+        }
+
+
+      })
+    })
+
+
+
+
+
+
+
+
+
+
+
     // all user collection in database is here
     app.post('/users', async (req, res) => {
       const user = req.body;
@@ -285,17 +366,17 @@ async function run() {
       // const result = await details.findOne(query);
       // res.send(result);
     })
+    app.post('/quantity-product-added', async (req, res) => {
+      const productData = req.body
+      const insertQuantityProduct = await quantityProductCollection.insertOne(productData)
+      res.send(insertQuantityProduct)
+    })
     app.get("/filter-collections", async (req, res) => {
       const result = await filterImage.find().toArray()
       res.send(result)
     })
 
-    // here i make handleAddCart operation
-    app.post('/product-added-database', async (req, res) => {
-      const product = req.body
-      const insertProduct = await userOrderProduct.insertOne(product)
-      res.send(insertProduct)
-    })
+
 
     // seller add product to database
     app.post('/seller-added-product', async (req, res) => {
@@ -303,17 +384,40 @@ async function run() {
       const sellerInsertProduct = await product.insertOne(addedProduct)
       res.send(sellerInsertProduct)
     })
+
+    // here i make handleAddCart operation
+    app.post('/product-added-database', async (req, res) => {
+      const product = req.body
+      product.quantity = 1
+      product.initialPrice = req.body.price
+      const insertProduct = await userOrderProduct.insertOne(product)
+      res.send(insertProduct)
+    })
+
+    // here i update the increment or decrement value 
+    app.put('/update-product-quantity/:productId', async (req, res) => {
+      const productId = req.params.productId;
+      const newQuantity = req.body.quantity;
+      const newInitialPrice = req.body.initialPrice;
+      await userOrderProduct.findOneAndUpdate(
+        { _id: new ObjectId(productId) },
+        { $set: { quantity: newQuantity, initialPrice: newInitialPrice } },
+        { returnOriginal: false }
+      );
+
+      res.send({ message: 'Product quantity updated successfully' });
+    });
     // find user product by specific email
-    app.get('/product-added-database', jsonWebToken, async (req, res) => {
+    app.get('/product-added-database', async (req, res) => {
       const email = req.query.email;
       if (!email) {
         res.send([]);
       }
 
-      const decodedEmail = req.decoded.email;
-      if (email !== decodedEmail) {
-        return res.status(403).send({ error: true, message: 'forbidden access' })
-      }
+      // const decodedEmail = req.decoded.email;
+      // if (email !== decodedEmail) {
+      //   return res.status(403).send({ error: true, message: 'forbidden access' })
+      // }
 
       const query = { email: email };
       const result = await userOrderProduct.find(query).toArray();
